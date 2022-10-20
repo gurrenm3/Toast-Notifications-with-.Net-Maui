@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToastNotificationDemo.Maui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .Net Maui ToastNotification Demo!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Click a button below to test a toast notification!"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout 
+                HorizontalOptions="Center"
+                Margin="50, 0">
+                <Button
+                    x:Name="BasicToastBtn"
+                    Text="Basic Toast"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+
+                <Button
+                    x:Name="ToastOkBtn"
+                    Text="Toast With Ok Button"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+
+                <Button
+                    x:Name="ToastYesNoBtn"
+                    Text="Toast With Yes No Buttons"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+
+                <Button
+                    x:Name="ToastWithImageBtn"
+                    Text="Toast With Image"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+
+                <Button
+                    x:Name="ToastWithHeroImageBtn"
+                    Text="Toast With Hero Image"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+
+                <Button
+                    x:Name="ToastWithHeroImageAndThumbsBtn"
+                    Text="Toast With Hero Image and Thumbs up/down"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout 
+                HorizontalOptions="Center">
+                
+                <Button
+                    x:Name="ToastWithDropDown"
+                    Text="Toast With Drop Down"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+
+                <Button
+                    x:Name="ToastWithProgressBar"
+                    Text="Toast With Progress Bar"
+                    HorizontalOptions="Center"
+                    Margin="5,0"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
