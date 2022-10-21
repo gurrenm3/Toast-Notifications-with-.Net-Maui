@@ -55,6 +55,17 @@ After pasting this second part in you'll have to change a 3 values.
 2. Under `com:Class` change `Id="yourApplicationIdGuidHere"` to your actual applications GUID. The documentation says it can be any string from 2 to ~30 characters long, however I think it's best to use your GUID to prevent any conflicts.
 3. Under `desktop:ToastNotificationActivation` change `ToastActivatorCLSID="yourApplicationIdGuidHere"` to your actual applications GUID. Same as above in step 2. See mine at the link above if you're confused.
 
+Now that the ToastActivator is setup you need to subscribe to it once in your app. If you don't do this then anything with Background Activation won't work. I recommend putting the code below in the Constructor for your Windows App, like so:
+```
+ToastNotificationManagerCompat.OnActivated += (notificationArgs) =>
+{
+      // you don't need to put anything here if you don't want to. 
+      // You just need to subscribe to it in your app
+};
+```
+
+If you need more help, check out how I did mine [here](https://github.com/gurrenm3/Toast-Notifications-with-.Net-Maui/blob/fe2f7c526c510c00f78a82225ac324a0e2d2eb7d/ToastNotificationDemo.Maui/Platforms/Windows/App.xaml.cs#L28)
+
 That's it. Your .Net Maui app is now able to use Windows Toast Notifications fully without any issues!
 
 ## Things to note
