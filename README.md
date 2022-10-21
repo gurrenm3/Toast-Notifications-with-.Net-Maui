@@ -10,6 +10,7 @@ There is very little documentation on getting Windows Toast Notifications to wor
 The reason Windows Toast Notifications don't normally work for .Net Maui projects is because 2 important things are missing:
 1. Add the nuget package [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications) to your project.
 2. Edit the app manifest for the windows project and add support for the ToastActivator. 
+3. Subscribe to the ToastActivator somewhere in your code. This is basically `ToastNotificationManagerCompat.OnActivated`
 
 ## Enable Toast Activator
 The toast activator allows us to subscribe to OnActivated events. This is necessary because it allows us to see when a button is clicked, a dropdown item is selected, text entered, etc. Without this we cannot get any activation info from our toast notifications. This is especially true if your toast element has background activation (it runs in the background and won't open a new window). As mentioned above, this is normally not enabled in a .Net Maui project so things will just flat out not work. To enable this in your project, go to your `Package.appxmanifest` file for the Windows project, located at `Platforms/Windows/Package.appxmanifest`. Right click this file and click "View Code" to edit it manually. If this doesn't work you can navigate to the folder with this file, then edit it with a text editor like Notepad++ or Visual Studio Code. Add the following code to enable it:
