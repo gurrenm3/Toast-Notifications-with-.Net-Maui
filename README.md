@@ -7,7 +7,7 @@ TLDR: Use this to learn how to make any kind of toast notification like the ones
 There is very little documentation on getting Windows Toast Notifications to work with .Net Maui apps. If trying to use them out of the box, it won't work because some important configurations are missing from the project. This will show you what you need to do in order to get it to work. The project also comes with several examples of different Toast Notifications, giving you reference for how you could structure your own.
 
 ## Steps to get started
-The reason Windows Toast Notifications don't normally work for .Net Maui projects is because 2 important things are missing:
+The reason Windows Toast Notifications don't normally work for .Net Maui projects is because 3 important things are missing:
 1. Add the nuget package [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications) to your project.
 2. Edit the app manifest for the windows project and add support for the ToastActivator. 
 3. Subscribe to the ToastActivator somewhere in your code. This is basically `ToastNotificationManagerCompat.OnActivated`
