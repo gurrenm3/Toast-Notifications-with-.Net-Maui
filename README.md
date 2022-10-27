@@ -1,7 +1,7 @@
 # Toast Notifications with .Net Maui
 This project demonstrates and explains how to use Windows Toast Notifications with .Net Maui
 
-TLDR: Use this to learn how to make any kind of toast notification like the ones from the [Microsoft Documentation](https://learn.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/adaptive-interactive-toasts?tabs=builder-syntax)
+TLDR: This project will teach you how to make any kind of toast notification like the ones from the [Microsoft Documentation](https://learn.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/adaptive-interactive-toasts?tabs=builder-syntax)
 
 ## Why does this project exist
 There is very little documentation on getting Windows Toast Notifications to work with .Net Maui apps. If trying to use them out of the box, it won't work because some important configurations are missing from the project. This will show you what you need to do in order to get it to work. The project also comes with several examples of different Toast Notifications, giving you reference for how you could structure your own.
